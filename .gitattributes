@@ -1,0 +1,37 @@
+# --------------------
+# ALTOS-Project Git Attributes
+# --------------------
+
+# Force UTF-8 pour tous les fichiers texte
+* text=auto eol=lf
+
+# Spécifique pour Markdown (description propre dans GitHub)
+*.md text eol=lf charset=utf-8
+
+# Traitement spécifique pour les notebooks (future-proofing)
+*.ipynb text eol=lf
+
+# Audio / Binary (ne pas convertir les binaires)
+*.mp3 binary
+*.wav binary
+*.ogg binary
+
+# Images (binary aussi)
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.svg binary
+
+# Scripts shell
+*.sh text eol=lf
+
+# Fichiers JSON (ex pour futures configs agents)
+*.json text eol=lf
+
+# Python
+*.py text eol=lf
+
+# Licences
+LICENSE* text eol=lf
+
