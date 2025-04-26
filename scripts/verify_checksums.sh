@@ -1,19 +1,18 @@
 #!/bin/bash
 
 # ====================================
-# Vérificateur d'intégrité ALTOS
+# 🔍 ALTOS - Vérification d'Intégrité
 # ====================================
 
 REFERENCE_FILE=".secure/checksums_reference.txt"
 
-echo "🔍 Vérification des checksums en cours..."
+echo "🔍 Vérification de l'intégrité des fichiers ALTOS..."
 
 if [ ! -f "$REFERENCE_FILE" ]; then
     echo "❌ Fichier de référence manquant : $REFERENCE_FILE"
     exit 1
 fi
 
-# Test tous les fichiers listés
 errors=0
 
 while read -r line; do

@@ -1,0 +1,34 @@
+# 🧪 Makefile.test - Validation Complète ALTOS-Project
+# Auteur : Erlé & ALT
+# But : Vérifications et tests automatiques de la structure et de l'intégrité
+
+.PHONY: test test-status test-vault test-integrity test-structure
+
+# Vérifie la structure logique et sécuritaire du projet
+test: test-status test-vault test-integrity test-structure
+	@echo "✅ Tous les tests de validation ALTOS-Project sont PASSÉS avec succès."
+
+# Test de script status général
+test-status:
+	@echo "🔍 Test [1/4] : Vérification globale de la structure ALTOS..."
+	@bash ./status-altos.sh || (echo '❌ Échec de status-altos.sh' && exit 1)
+
+# Vérifie que le coffre sécurisé existe
+test-vault:
+	@echo "🔍 Test [2/4] : Vérification du dossier sécurisé .secure/..."
+	@if [ -d ".secure" ]; then echo "✅ .secure/ est présent."; else echo "❌ Dossier .secure/ manquant."; exit 1; fi
+
+# Vérifie l'intégrité SHA256 des fichiers critiques
+test-integrity:
+	@echo "🔍 Test [3/4] : Vérification d'intégrité SHA256 des fichiers critiques..."
+	@bash scripts/verify_checksums.sh || (echo '❌ Échec de vérification des checksums' && exit 1)
+
+# Vérifie que l'arborescence obligatoire existe
+test-structure:
+	@echo "🔍 Test [4/4] : Vérification de la structure obligatoire..."
+	@for dir in agent docs foundation evolution archives notes scripts boot_logs voice; do \
+		if [ ! -d "$$dir" ]; then echo "❌ Dossier manquant : $$dir"; exit 1; fi; \
+	done
+	@echo "✅ Tous les dossiers critiques sont présents."
+
+

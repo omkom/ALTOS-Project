@@ -32,4 +32,4 @@ Pour consulter une copie complète de cette licence, veuillez visiter :
 
 ---
 
-**Signé par Erlé Alberton et ALT — 2025.**
+**Signé par Erlé aka @cubilizer et ALT — 2025.**
