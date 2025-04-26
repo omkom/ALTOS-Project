@@ -57,6 +57,17 @@ Voici les commandes principales :
 
 ---
 
+## 🔒 Protection du Cercle Intime
+
+Le fichier `ALT_CERCLE_INTIME.md` contenant les liens vivants d'Erlé est protégé par cryptage.
+
+Pour sécuriser ce fichier :
+
+```bash
+make secure-cercle
+```
+---
+
 ## 🔒 Maintenance de l'intégrité (Checksums)
 
 ALTOS-Project utilise un système d'empreintes SHA256 pour garantir l'intégrité de ses fichiers critiques.

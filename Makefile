@@ -33,20 +33,18 @@ vault-status:
 	@echo "🔒 Statut du dossier sécurisé .secure/..."
 	@if [ -d ".secure" ]; then echo "✅ .secure/ existe et est protégé."; else echo "❌ .secure/ manquant."; fi
 
-reorganize:
-	@echo "🏗️ Réorganisation de l'arborescence ALTOS..."
-	@bash ./reorganize-altos.sh
+secure-cercle:
+	@echo "🔒 Protection du Cercle Intime en cours..."
+	@bash scripts/secure-cercle.sh
 
 help:
 	@echo ""
 	@echo "✨ Commandes disponibles pour ALTOS-Project :"
 	@echo ""
-	@echo "  make status             ➔ Vérifier la structure, l'intégrité et la sécurité globale"
-	@echo "  make sync               ➔ Commit rapide et propre de l'état actuel du projet"
-	@echo "  make refresh-checksums  ➔ Régénérer les checksums après validation officielle"
-	@echo "  make verify             ➔ Vérifier l'intégrité des fichiers critiques par SHA256"
-	@echo "  make secure-status      ➔ Vérifier l'état de sécurité (checksums)"
+	@echo "  make status             ➔ Vérifier la structure, l'intégrité et la sécurité"
+	@echo "  make sync               ➔ Commit rapide et propre de l'état actuel"
+	@echo "  make refresh-checksums  ➔ Régénérer les checksums en mode Conseil du NOUS"
 	@echo "  make vault-status       ➔ Vérifier l'existence du coffre sécurisé .secure/"
-	@echo "  make reorganize         ➔ Réorganiser les fichiers et rétablir la structure"
+	@echo "  make secure-cercle      ➔ Protéger par chiffrement le fichier Cercle Intime"
 	@echo "  make help               ➔ Afficher ce menu d'aide"
 	@echo ""

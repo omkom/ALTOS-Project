@@ -46,3 +46,7 @@ build_altos.sh
 
 # Protéger le fichier de validation
 .secure/
+
+# Protéger les fichiers privé du cerle intime
+agent/ALT_CERCLE_INTIME.md
+agent/.secure/ALT_CERCLE_INTIME.md.gpg
