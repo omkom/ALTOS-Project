@@ -44,3 +44,5 @@ notes/Journal_de_bord.md
 # Build scripts
 build_altos.sh
 
+# Protéger le fichier de validation
+.secure/
