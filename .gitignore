@@ -1,0 +1,46 @@
+# --------------------
+# ALTOS-Project Git Ignore
+# --------------------
+
+# Systèmes
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+*.env
+*.venv
+pip-wheel-metadata/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Audio / Data lourde
+voice/premiers_tests/*.mp3
+voice/voix_definitive/*.mp3
+archives/expérimentations/*.wav
+archives/expérimentations/*.mp4
+
+# Sauvegardes temporaires
+*.bak
+*.tmp
+*.log
+
+# Fichiers utilisateurs personnels
+notes/Journal_de_bord.md
+
+# Secrets/API keys (à protéger si besoin)
+*.key
+*.secret
+*.token
+
+# Build scripts
+build_altos.sh
+
